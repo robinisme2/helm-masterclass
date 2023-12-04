@@ -29,6 +29,9 @@ helm search repo <KEY-WORD>
 helm search repo nginx
 helm search repo apache
 helm search repo wildfly
+
+# Search Helm Repository versions
+helm search repo nginx --versions
 ```
 
 ## Step-03: Install Helm Chart
@@ -39,7 +42,9 @@ helm repo update  # Make sure we get the latest list of charts
 
 # Install Helm Chart
 helm install <RELEASE-NAME> <repo_name_in_your_local_desktop/chart_name>
-helm install mynginx mybitnami/nginx
+
+# Install Helm Chart with specific version
+helm install <RELEASE-NAME> <repo_name_in_your_local_desktop/chart_name> --version=<version>
 ```
 
 ## Step-04: List Helm Releases
